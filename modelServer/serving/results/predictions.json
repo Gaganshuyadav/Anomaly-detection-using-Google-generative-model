@@ -1,0 +1,191 @@
+[
+    {
+      "text": "perfect for breakfast or a mid day snack",
+      "classification": "Positive",
+      "score": 0.85,
+      "anomalous": false,
+      "explanation": "Positive sentiment, aligns with general positive reviews."
+    },
+    {
+      "text": "the product was excellent",
+      "classification": "Positive",
+      "score": 0.90,
+      "anomalous": false,
+      "explanation": "Strong positive sentiment, consistent with positive feedback."
+    },
+    {
+      "text": "exceeded my expectations",
+      "classification": "Positive",
+      "score": 0.88,
+      "anomalous": false,
+      "explanation": "Positive sentiment, reflects satisfaction."
+    },
+    {
+      "text": "not worth the price",
+      "classification": "Negative",
+      "score": 0.10,
+      "anomalous": true,
+      "explanation": "Strong negative sentiment, contrasts with other positive reviews."
+    },
+    {
+      "text": "very disappointing experience",
+      "classification": "Negative",
+      "score": 0.05,
+      "anomalous": true,
+      "explanation": "Extremely negative sentiment, indicates a significant issue."
+    },
+    {
+      "text": "product work is very good",
+      "classification": "Positive",
+      "score": 0.75,
+      "anomalous": false,
+      "explanation": "Positive sentiment, generally aligns with positive reviews."
+    },
+    {
+      "text": "i like product quality",
+      "classification": "Positive",
+      "score": 0.80,
+      "anomalous": false,
+      "explanation": "Positive sentiment, consistent with positive feedback."
+    },
+    {
+      "text": "the service was slow",
+      "classification": "Negative",
+      "score ": 0.30,
+      "anomalous": true,
+      "explanation": "Negative sentiment, indicates a service issue."
+    },
+    {
+      "text": "the product have many defects",
+      "classification": "Negative",
+      "score": 0.15,
+      "anomalous": true,
+      "explanation": "Strong negative sentiment, suggests quality control issues."
+    },
+    {
+      "text": "the product worth it",
+      "classification": "Positive",
+      "score": 0.70,
+      "anomalous": false,
+      "explanation": "Positive sentiment, aligns with positive reviews."
+    },
+    {
+      "text": "absolutely love this product",
+      "classification": "Positive",
+      "score": 0.95,
+      "anomalous": false,
+      "explanation": "Very strong positive sentiment."
+    },
+    {
+      "text": "this is the best purchase I've made all year!",
+      "classification": "Positive",
+      "score": 0.95,
+      "anomalous": false,
+      "explanation": "Extremely positive sentiment."
+    },
+    {
+      "text": "the product was exactly what I needed, highly recommend it",
+      "classification": "Positive",
+      "score": 0.90,
+      "anomalous": false,
+      "explanation": "Positive sentiment, reflects satisfaction."
+    },
+    {
+      "text": "I was really disappointed with the quality, it broke after one use",
+      "classification": "Negative",
+      "score": 0.05,
+      "anomalous": true,
+      "explanation": "Extremely negative sentiment, indicates a significant issue."
+    },
+    {
+      "text": "great flavor and texture, will definitely buy again",
+      "classification": "Positive",
+      "score": 0.85,
+      "anomalous": false,
+      "explanation": "Positive sentiment, aligns with positive reviews."
+    },
+    {
+      "text": "the instructions were unclear and hard to follow",
+      "classification": "Negative",
+      "score": 0.20,
+      "anomalous": true,
+      "explanation": "Negative sentiment, indicates usability issues."
+    },
+    {
+      "text": "this is a fantastic product, exceeded all my expectations",
+      "classification": "Positive",
+      "score": 0.90,
+      "anomalous": false,
+      "explanation": "Strong positive sentiment, reflects high satisfaction."
+    },
+    {
+      "text": "not what I expected",
+      "classification": "Negative",
+      "score": 0.25,
+      "anomalous": true,
+      "explanation": "Negative sentiment, indicates disappointment."
+    },
+    {
+      "text": "very misleading description",
+      "classification": "Negative",
+      "score": 0.10,
+      "anomalous": true,
+      "explanation": "Strong negative sentiment, suggests a significant issue with product representation."
+    },
+    {
+      "text": "the packaging was damaged upon arrival, very disappointing",
+      "classification": "Negative",
+      "score": 0.05,
+      "anomalous": true,
+      "explanation": "Extremely negative sentiment, indicates a logistical issue."
+    },
+    {
+      "text": "absolutely love the taste, will buy again for sure",
+      "classification": "Positive",
+      "score": 0.90,
+      "anomalous": false,
+      "explanation": "Strong positive sentiment, reflects satisfaction."
+    },
+    {
+      "text": "the item arrived late and was not as described",
+      "classification": "Negative",
+      "score": 0.15,
+      "anomalous": true,
+      "explanation": "Negative sentiment, indicates issues with delivery and product description."
+    },
+    {
+      "text": "fantastic customer service, very helpful and responsive",
+      "classification": "Positive",
+      "score": 0.95,
+      "anomalous": false,
+      "explanation": "Very strong positive sentiment regarding service."
+    },
+    {
+      "text": "the product was exactly what I needed",
+      "classification": "Positive",
+      "score": 0.85,
+      "anomalous": false,
+      "explanation": "Positive sentiment, reflects satisfaction."
+    },
+    {
+      "text": "I was really disappointed with the quality",
+      "classification": "Negative",
+      "score": 0.10,
+      "anomalous": true,
+      "explanation": "Strong negative sentiment, indicates a significant issue."
+    },
+    {
+      "text": "great flavor and texture, will definitely buy again",
+      "classification": "Positive",
+      "score": 0.85,
+      "anomalous": false,
+      "explanation": " Positive sentiment, aligns with positive reviews."
+    },
+    {
+      "text": "the instructions were unclear and hard to follow",
+      "classification": "Negative",
+      "score": 0.20,
+      "anomalous": true,
+      "explanation": "Negative sentiment, indicates usability issues."
+    }
+  ]

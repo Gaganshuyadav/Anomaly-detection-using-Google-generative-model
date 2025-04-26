@@ -1,0 +1,7 @@
+client/.env
+modelServer/.env
+client/node_modules
+modelServer/node_modules
+modelServer/serving/model
+
+
