@@ -11,6 +11,20 @@ This project is a React-based frontend application for an anomaly detection syst
 - **Custom Test Cases**: Allows users to create and manage test cases for analysis.
 - **Real-Time Feedback**: Provides instant feedback and results for user inputs.
 
+
+## Screen View
+
+# ScreenShot 1
+![Docs Editor 1](./client/public/screenshots/screenshot-anomaly-d-4.png)
+
+# ScreenShot 2
+![Docs Editor 2](./client/public/screenshots/screenshot-anomaly-d-2.png)
+
+# ScreenShot 3
+![Docs Editor 2](./client/public/screenshots/screenshot-anomaly-d-3.png)
+
+
+
 ## Technology Stack
 
 ### Frontend
