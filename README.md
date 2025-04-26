@@ -18,9 +18,12 @@ This project is a React-based frontend application for an anomaly detection syst
 ![Docs Editor 1](./client/public/screenshots/screenshot-anomaly-d-4.png)
 
 # ScreenShot 2
-![Docs Editor 2](./client/public/screenshots/screenshot-anomaly-d-2.png)
+![Docs Editor 1](./client/public/screenshots/screenshot-anomaly-d-1.png)
 
 # ScreenShot 3
+![Docs Editor 2](./client/public/screenshots/screenshot-anomaly-d-2.png)
+
+# ScreenShot 4
 ![Docs Editor 2](./client/public/screenshots/screenshot-anomaly-d-3.png)
 
 
