@@ -85,7 +85,7 @@ const RepresentDataTable = () => {
 
       />
 
-      <Card className='border-2 w-[60vw] mx-auto mt-16 shadow-xl hover:shadow-gray-600 transition '>
+      <Card className='border-2 w-[60vw] mx-auto mt-16 shadow-xl shadow-gray-600 transition '>
         <CardHeader>
           <h2 className="text-xl font-medium">Anomaly Scores Over Time</h2>
         </CardHeader>

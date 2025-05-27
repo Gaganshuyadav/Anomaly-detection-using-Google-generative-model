@@ -41,7 +41,7 @@ export function TestInput( { open, setOpen}:{ open:boolean, setOpen:Function}) {
 
 
   return (
-    <Card className="w-[430px] ">
+    <Card className="w-[430px] bg-slate-700 border-slate-800 border-2">
       <CardHeader>
         <CardTitle>Write Input</CardTitle>
         <CardDescription>This input is used to train the model</CardDescription>

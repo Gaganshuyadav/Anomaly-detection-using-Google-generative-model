@@ -6,13 +6,13 @@ import toast from 'react-hot-toast';
 const Home = () => {
 
     //check internet connectivity
-    useEffect(()=>{
+    useEffect(() => {
         function checkInternetConnection() {
             return fetch('https://www.google.com', { method: 'HEAD', mode: 'no-cors' })
                 .then(() => true)
                 .catch(() => false);
         }
-        
+
         checkInternetConnection().then(isOnline => {
             if (isOnline) {
                 toast.success("You are online");
@@ -20,36 +20,73 @@ const Home = () => {
                 toast.error("You are offline");
             }
         });
-    },[]);
+    }, []);
 
     return (
         <>
-                <div className="relative">
-        
+            {
+                <div className="bg-gradient-to-b bg-gray-500  min-h-screen pt-6">
                     {/* Announcement Banner */}
-                    <div className="bg-gray-300 p-3 text-center">
-                        <button className="ml-4 bg-black text-white py-1 px-3 rounded hover:scale-110 trasition duration-300">Gaganshu Yadav</button>
-                        <button className="ml-4 bg-black text-white py-1 px-3 rounded hover:scale-110 trasition duration-300">Himani Sharam</button>
-                        <button className="ml-4 bg-black text-white py-1 px-3 rounded hover:scale-110 trasition duration-300">Deepak</button>
-                        <button className="ml-4 bg-black text-white py-1 px-3 rounded hover:scale-110 trasition duration-300">Dipanshu Sharma</button>
+                    <div className="bg-slate-800 text-gray-100 w-[95%] p-8 rounded-2xl shadow-2xl mx-auto">
+                        <div className="text-center">
+                            <h1 className="text-4xl font-extrabold mt-4 text-indigo-300">
+                                Anomaly Detection in NLP Text Data Using ML Techniques
+                            </h1>
+                            <p className="mt-4 text-lg text-gray-300">
+                                Try our analyzer for fast and accurate anomaly detection
+                            </p>
+                        </div>
+
+                        {/* Creators & Supervisor */}
+                        <div className="w-full flex flex-col md:flex-row justify-between items-start md:items-center mb-8 mt-12">
+                            {/* Created By */}
+                            <div className="ml-4 md:ml-10">
+                                <h2 className="text-2xl font-semibold mb-4 text-indigo-200">Created By :</h2>
+                                <div className="grid grid-cols-2 gap-y-2 gap-x-6">
+                                    {['Gaganshu Yadav', 'Himani Sharma', 'Deepak', 'Dipanshu Sharma'].map((name) => (
+                                        <p key={name} className="text-gray-100 text-lg font-medium">{name}</p>
+                                    ))}
+                                </div>
+                            </div>
+
+                            {/* Supervisor */}
+                            <div className="border border-gray-600 bg-slate-700 hover:bg-slate-600 rounded-xl p-6 w-full md:w-80 mt-8 md:mt-0">
+                                <h2 className="text-2xl font-semibold mb-2 text-indigo-200">Under Supervision of :</h2>
+                                <p className="text-gray-300 text-lg">Mr. Arun Kumar Rai</p>
+                            </div>
+                        </div>
                     </div>
-        
+
                     {/* Main Content */}
-                    <main className="flex flex-col items-center text-center p-10 mt-12">
-                        <h1 className="text-3xl font-bold mt-10 text-gray-600">Anomaly Detection NLP Text Data Using Advance Machine Learning Techniques</h1>
-                        <p className="mt-4 text-lg text-gray-600">Try our analyzer for Anomaly Detection</p>
-                        <div className="mt-8 space-x-4">
-                            <Link to={"/analysis"} className="px-6 tracking-wider bg-gray-800 text-white py-2  rounded hover:bg-gray-600 trasition duration-300">Analyzer</Link>
-                            <a href='https://ieeexplore.ieee.org/document/10912228' className="border border-gray-700 font-semibold text-gray-700 py-2 px-4 rounded hover:bg-black hover:text-white hover:scale-110 trasition duration-300">Research Paper In IEEE</a>
+                    <main className="flex flex-col items-center text-center p-10 mt-16">
+                        <div className="mt-8 space-x-6">
+                            <Link
+                                to={"/analysis"}
+                                className="px-8 py-3 tracking-wide bg-slate-800 text-white rounded-lg hover:bg-indigo-500 transition duration-300 shadow-md hover:scale-105"
+                            >
+                                Launch Analyzer
+                            </Link>
+                            <a
+                                href='https://ieeexplore.ieee.org/document/10912228'
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="border border-slate-800 font-semibold text-slate-800 py-3 px-6 rounded-lg hover:bg-indigo-100 transition duration-300 shadow-md hover:scale-105"
+                            >
+                                Research Paper (IEEE)
+                            </a>
                         </div>
                     </main>
-        
-                    {/* Footer Section */}
-                    <footer className="bg-gray-800 text-white text-center p-4 fixed bottom-0 w-full">
-                        <p>©2025 Final Year Project</p>
+
+                    {/* Footer */}
+                    <footer className="bg-slate-800 text-gray-300 text-center p-4 mt-12 rounded-t-lg fixed bottom-0 left-0 w-full">
+                        <p>© 2025 Final Year Project</p>
                     </footer>
                 </div>
-                </>
+
+
+            }
+
+        </>
     )
 }
 

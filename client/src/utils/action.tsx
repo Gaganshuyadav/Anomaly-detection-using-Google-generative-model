@@ -17,7 +17,7 @@ const StartAnalyzingButton = ( { handleOpenAnalyzedDialog , inputBoxes}:{ handle
 
     const dispatch = useDispatch();
     const { isLoading } = useSelector((state: { component: ComponentStateType }) => state.component);
-
+_
     const callGemini = async ( inputContentBoxes:string[])=>{
 
         dispatch( setLoading(true));
@@ -29,7 +29,7 @@ const StartAnalyzingButton = ( { handleOpenAnalyzedDialog , inputBoxes}:{ handle
         i am giving you input as string of array, and this strings are text and after taking input you just have to find the anomalies by analyzing all input strings, and when majority of string are similar and minority is differnet you just give false for those , and explain why they are anomalous and different from majority texts and  give output in this format:- [ { Text: "string", Classification: number, Score: number, Explanation: string, Anomalous: boolean },  { Text: "string", Classification: number, Score: number, Explanation: string, Anomalous: boolean }] , and please give output in this format only, and not give extra content with it other wise my api fails, and not even talk to me, other wise format fails, now read the input,
         this is input string:${inputContentBoxes}
         `;
-
+        
         const result:GenerateContentResult = await model.generateContent(propmt);
         dispatch( setLoading(false));
 
@@ -52,7 +52,7 @@ return (
                     callGemini(inputContentBoxes);
                 } 
             }} 
-            disabled={isLoading} className='trasition duration-300 w-8/12 shadow-gray-300 shadow-lg bg-gray-800  text-white font-semibold py-2 rounded-md hover:bg-gray-500 transition duration-200'>
+            disabled={isLoading} className='trasition duration-300 p-2 bg-slate-600 shadow-2xl hover:bg-indigo-500  text-white font-semibold py-2 rounded-md transition duration-200'>
               Start Analyzing Data
         </button>
   )

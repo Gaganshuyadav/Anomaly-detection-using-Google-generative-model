@@ -4,10 +4,25 @@ import dotenv from "dotenv";
 import { initializing } from "../../model/pre-m/mode/mode.js";
 import { data } from "../../data/test-export-data.js";
 import cors from "cors";
+import { Server} from "socket.io";
+import http from "http";
+
+const server = http.createServer(app);
+
+const io = new Server(server, {
+    cors:{
+        origin:true,
+    }
+});
+
+//set socket
+app.set("io",io);
+
 
 app.use(cors())
 app.use(express.json());
 dotenv.config();
+
 
 app.get("/", ( req, res)=>{
 
@@ -39,6 +54,8 @@ app.post("/store-test", ( req, res)=>{
         data.label.push(0);
     }
 
+    req.app.get("io").emit("INPUT-TEST-DATA-FROM-CLIENT",{ data:"come from server", body:req.body});
+
     res.status(201).json({
         success:true,
         data:req.body
@@ -47,7 +64,7 @@ app.post("/store-test", ( req, res)=>{
 
 const PORT = process.env.PORT || 8080;
 
-app.listen( PORT, ()=>{
+server.listen( PORT, ()=>{
     initializing().then(()=>{
         console.log("server is working");
     })

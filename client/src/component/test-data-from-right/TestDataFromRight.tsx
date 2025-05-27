@@ -1,14 +1,13 @@
-import React from 'react';
+import React from 'react'; 
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
-import { useToaster, toast } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 
 const TestDataFromRight = () => {
 
-  
   const sampleText = [
     "perfect for breakfast or a mid day snack",
     "the product was excellent",
-    " exceeded my expectations",
+    "exceeded my expectations",
     "not worth the price", 
     "very disappointing experience",
     "product work is very good",
@@ -35,31 +34,39 @@ const TestDataFromRight = () => {
     "the instructions were unclear and hard to follow"
   ];
 
-  const handleCopyText = async ( content:string)=>{
+  const handleCopyText = async (content:string) => {
     await window.navigator.clipboard.writeText(content);
     toast.success("Text Copied");
   };
 
   return (
-    <div className='w-[40vw]'>
-        <div className='text-xl text-center font-semibold tracking-wider text-gray-500 py-2'>Testing Data</div>
-        {
-            sampleText.map(( text, i)=>{
-                return(
-                    <div key={i} className='border-[1px]  p-2 border-gray-200 flex items-center'>
-                        <div className='p-1 mr-2'>
-                            <div onClick={()=>{ handleCopyText(text)}} className='border-2 p-[2px] rounded border-gray-400 bg-white text-gray-400 bg-white hover:bg-gray-300  hover:text-white'>
-                                <ContentCopyIcon/>
-                            </div>
-                        </div>
-                        <div className='text-gray-600'>{text}</div>
-                    </div>
-                )
-            })
-        }
-        <div className='p-4'></div>
-    </div>
-  )
-}
+    <div className="bg-gradient-to-b from-gray-700 to-gray-900 pt-6 ">
+      
+      {/* Header */}
+      <div className="bg-slate-800 text-gray-100 w-[95%] p-8 rounded-2xl shadow-2xl mx-auto">
+        <div className="text-center">
+          <h1 className="text-4xl font-extrabold mt-4 text-indigo-300">Sample Test Data</h1>
+          <p className="mt-4 text-lg text-gray-300">Click any text below to copy it to clipboard!</p>
+        </div>
+      </div>
 
-export default TestDataFromRight
+      {/* Sample Text Cards */}
+      <div className="w-[90%] mx-auto mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+        {sampleText.map((text, i) => (
+          <div key={i} className="border border-gray-600 bg-slate-800 rounded-2xl shadow-lg p-4 flex items-center hover:bg-slate-700 transition duration-300">
+            <button
+              onClick={() => handleCopyText(text)}
+              className="border-2 p-2 rounded-full border-gray-400 bg-white text-gray-600 hover:bg-indigo-500 hover:text-white transition duration-300 mr-4"
+            >
+              <ContentCopyIcon />
+            </button>
+            <p className="text-gray-300 text-lg">{text}</p>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  );
+};
+
+export default TestDataFromRight;

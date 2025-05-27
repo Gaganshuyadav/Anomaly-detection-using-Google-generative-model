@@ -2,12 +2,11 @@ import * as React from 'react';
 import { PieChart } from '@mui/x-charts/PieChart';
 import axios from 'axios';
 import { manager } from '../../config';
+import { socket } from '../../lib/socketProvider';
 
 export default function PieChartComponent() {
 
     const [ piChartData, setPiChartData] = React.useState([]);
-
-    React.useEffect(()=>{
         
         async function getTestingData(){
 
@@ -21,9 +20,12 @@ export default function PieChartComponent() {
         });
 
         setPiChartData(dataMap);
-console.log(dataMap)
+        console.log(dataMap)
 
         }
+
+
+    React.useEffect(()=>{
 
         getTestingData();
 
@@ -49,16 +51,36 @@ console.log(dataMap)
 
 
 
+  const inputTestDataFromClient = ( data:any)=>{
+      getTestingData();
+      console.log("socket ",data);
+  }
+
+  React.useEffect(()=>{
+
+    socket.on("INPUT-TEST-DATA-FROM-CLIENT", inputTestDataFromClient);
+
+    ()=>{
+        socket.off( "INPUT-TEST-DATA-FROM-CLIENT", inputTestDataFromClient);
+    }
+
+  },[]);
+
+
+
+
   return (
     <PieChart 
-      sx={{width:"100%", height:"100%"}}
+    colors={["rgb(23, 234, 41)","orange"]}
+      sx={{width:"100%", height:"100%", background:"rgb(51, 71, 104)", borderRadius:"20px"}}
       series={[
         {
           data: piChartLabelData,
           arcLabel: (item)=>`${item.label}`,
           highlightScope: { fade: 'global', highlight: 'item' },
           faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
-          valueFormatter: (item: { value: number }) =>{return `${item.value}-test`;},
+          valueFormatter: (item: { value: number }) =>{return `${item.value}-test`;}
+        ,
         },
       ]}
       height={200}
