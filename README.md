@@ -38,7 +38,7 @@ This project is a React-based frontend application for an anomaly detection syst
 
 ### Backend (Not included in this repository)
 - **Node.js**: For API handling.
-- **Python**: For machine learning and anomaly detection using BERT.
+- **Generative AI MODEL**: For anomaly detection.
 
 ### State Management
 - **Redux**: For managing application state.
