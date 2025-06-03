@@ -36,7 +36,7 @@ This project is a React-based frontend application for an anomaly detection syst
 - **TailwindCSS**: For styling and responsive design.
 - **Material-UI**: For pre-built UI components.
 
-### Backend (Not included in this repository)
+### Backend 
 - **Node.js**: For API handling.
 - **Generative AI MODEL**: For anomaly detection.
 
